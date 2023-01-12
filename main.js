@@ -50,13 +50,25 @@ function movimentaCarro() {
   //Objetivo, fazer com o que o carro apareça de novo
 
   if (xCarro == -50) { xCarro = 600 }
+
+  //FIm
 }
 
 function movimentaAtor() {
   if (keyIsDown(UP_ARROW)) {
-    yAtor -= 3;
+
+    //Acrescentei esse if para limitar o tamanho da tela
+    if (yAtor == 3) {
+    } else {
+      yAtor -= 3;
+    }
   }
   if (keyIsDown(DOWN_ARROW)) {
-    yAtor += 3;
+
+    //Acrescentei esse if para limitar o tamanho da tela
+    if (yAtor == 366) {
+    } else {
+      yAtor += 3;
+    }
   }
 }
